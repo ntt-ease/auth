@@ -4,6 +4,12 @@
 </head>
 <body>
 <h1>Code</h1>
-<input type="text" size="100" />
+<textarea rows="4" cols="100" id="code" />
+<script lang="javascript">
+  var input = document.getElementById('code');
+  input.value = location.search.slice(1);
+</script>
+<br />
+<button onclick="document.getElementById('code').select();document.execCommand('copy');">Copy</button>
 </body>
 </html>
